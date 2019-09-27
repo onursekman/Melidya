@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+<div id="page-wrapper">
+    <div class="row">
+
+        <div class="col-md-8 col-xs-12">
+            <div class="white-box">
+
+                <div class="form-group">
+                    <label class="col-md-12">İsim</label>
+                    <div class="col-md-12">
+                        <input type="text" placeholder="Lütfen İsminizi Giriniz" class="form-control form-control-line" name="Name" id="Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="example-email" class="col-md-12">Soyisim</label>
+                    <div class="col-md-12">
+                        <input type="text" placeholder="Lütfen Soyİsminizi Giriniz" class="form-control form-control-line" name="Surname" id="Surname">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="example-email" class="col-md-12">Email</label>
+                    <div class="col-md-12">
+                        <input type="text" name="Email" placeholder="Lütfen E-posta Adresinizi Giriniz" class="form-control form-control-line" id="Email" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="example-email" class="col-md-12">Şifre</label>
+                    <div class="col-md-12">
+                        <input type="password" name="Password" placeholder="Lütfen Şifrenizi Giriniz" class="form-control form-control-line" id="Password" />
+                    </div>
+                </div>
+
+
+                <button type="submit" id="add-user" click="#add-user" class="btn btn-primary"  >Ekle</button>
+
+            </div>
+            <div class="form-group">
+                <div class='alert alert-dismissible' id="divresult" style="display:none">
+                    <span class="label" border="1px" id="lblResultMessage" style="color:white"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/plugins/iCheck/icheck.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            })
+
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            })
+
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            })
+        })
+
+        $("#add-user").click(function () {
+            var Name = document.getElementById("Name").value;
+            var Surname = document.getElementById("Surname").value;
+            var Email = document.getElementById("Email").value;
+            var Password = document.getElementById("Password").value;
+            var data = {
+
+                Name: Name,
+                Surname: Surname,
+                Email: Email,
+                Password: Password,
+
+            }
+            return updatePassword(data);
+
+
+        })
+
+
+
+        function updatePassword(data) {
+            $.ajax({
+                url:"/Admin/User/AddUser",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data),
+
+                success: function (result) {
+                    if (result.resultCode == 200) {
+                        $("#divresult").removeClass("alert-danger");
+                        $("#divresult").addClass("alert-success");
+                    }
+                    else if (result.resultCode == 500) {
+                        $("#divresult").removeClass("alert-success");
+                        $("#divresult").addClass("alert-danger");
+
+                    }
+                    else {
+                        $("#divresult").removeClass("alert-success");
+                        $("#divresult").removeClass("lblSucMessage");
+                    }
+                    $("#lblResultMessage").text(result.resultMessage);
+
+                    $("#divresult").show();
+
+                    setTimeout(function () { $("#divresult").hide('slow'); }, 3000);
+
+
+                }
+
+            })
+        }
+
+    </script>
+}

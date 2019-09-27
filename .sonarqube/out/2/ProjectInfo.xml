@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>MelidyaEntity</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>bbc54ac1-62d0-4637-a639-a43b545544b0</ProjectGuid>
+  <FullPath>C:\Users\onurs\source\repos\Melidya2\MelidyaEntity\MelidyaEntity.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\onurs\source\repos\Melidya2\.sonarqube\out\2\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">C:\Users\onurs\source\repos\Melidya2\MelidyaEntity\bin\Debug\netcoreapp2.2\MelidyaEntity.dll.RoslynCA.json|C:\Users\onurs\source\repos\Melidya2\MelidyaEntity\bin\Debug\netcoreapp2.2\MelidyaEntity.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">C:\Users\onurs\source\repos\Melidya2\.sonarqube\out\2</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp2.2</TargetFramework>
+</ProjectInfo>

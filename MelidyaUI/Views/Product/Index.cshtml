@@ -1,0 +1,64 @@
+﻿@using MelidyaUI.Models
+@model List<ProductModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">ÜRÜNLERİMİZ</h2>
+                
+            </div>
+        </div>
+        <div class="row d-flex">
+            @foreach (ProductModel item in Model)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="/Product/ProductDetail/@item.ID" class="block-20"><img src="@item.Image" alt="Image" class="img-fluid"></a>
+                        <div class="text py-4 d-block">
+                           
+                            <h3 class="heading mt-2"><a href="/Product/ProductDetail/@item.ID">@item.Product_Name</a></h3>
+                  
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <li><a href="#">&lt;</a></li>
+                        <li><a href="/Product/ProductPagedlist/1">1</a></li>
+                        @if (ViewBag.sayfa>20)
+                        {
+
+                        <li><a href="/Product/ProductPagedlist/2">2</a></li>
+                        }
+                        else if (ViewBag.sayfa>40)
+                        {
+
+                        <li><a href="/Product/ProductPagedlist/3">3</a></li>
+                        }
+                        else if (ViewBag.sayfa>60)
+                        {
+
+                        <li><a href="/Product/ProductPagedlist/4">4</a></li>
+                        }
+                        else if (ViewBag.sayfa>80)
+                        {
+
+                        <li><a href="/Product/ProductPagedlist/5">5</a></li>
+                        }
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

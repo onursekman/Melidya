@@ -1,0 +1,44 @@
+﻿@using Melidya.Admin.Panel.Models
+@model SenderMessageModel
+@{
+    ViewData["Title"] = "ReplyMessage";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="col-md-8 col-xs-12">
+    <div class="white-box">
+        <form class="form-horizontal form-material" action="/Messages/ReplyMessage" method="post">
+            <div class="form-group">
+                <label class="col-md-12"></label>
+                <div class="col-md-12">
+                    <input type="hidden" value="@Model.MessageID" name="MessageID">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="example-email" class="col-md-12">Email</label>
+                <div class="col-md-12">
+                    <input type="email"  value="@Model.Email" class="form-control form-control-line" name="Email" id="example-email">
+                </div>
+            </div>
+          
+            <div class="form-group">
+                <label class="col-md-12">Message Title</label>
+                <div class="col-md-12">
+                    <input type="text" name="MessageTitle" class="form-control form-control-line">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-12">Message</label>
+                <div class="col-md-12">
+                    <textarea rows="5" name="MessageDetail" class="form-control form-control-line"></textarea>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button class="btn btn-success">Message Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

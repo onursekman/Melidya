@@ -1,0 +1,25 @@
+﻿@using MelidyaUI.Models
+@model ProductModel
+@{
+    ViewData["Title"] = "ProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 ftco-animate">
+                <h2 class="mb-3">@Model.Product_Name</h2>
+                <p>
+                    <img src="@Model.Image" alt="" class="img-fluid" width="750" height="500">
+                </p>
+                <h5>@Model.Product_Detail</h5>
+               
+            </div> <!-- .col-md-8 -->
+       
+
+        </div>
+    </div>
+</section> 

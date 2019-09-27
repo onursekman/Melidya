@@ -1,0 +1,16 @@
+t
+iC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\About\Index.g.cshtml.csutf-8w
+lC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Category\Index.g.cshtml.csutf-8v
+kC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Contact\Index.g.cshtml.csutf-8}
+rC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\CorporateSales\Index.g.cshtml.csutf-8t
+iC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Error\Index.g.cshtml.csutf-8s
+hC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.csutf-8v
+kC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Product\Index.g.cshtml.csutf-8~
+sC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Product\ProductDetail.g.cshtml.csutf-8u
+jC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.csutf-8…
+zC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.csutf-8x
+mC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout1.g.cshtml.csutf-8‰
+~C:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.csutf-8u
+jC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.csutf-8s
+hC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.csutf-8u
+jC:\Users\onurs\source\repos\Melidya2\Melidya2\obj\Debug\netcoreapp2.2\MelidyaUI.RazorTargetAssemblyInfo.csutf-8

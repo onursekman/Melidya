@@ -1,0 +1,10 @@
+q
+hC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\Controllers\CategoryController.csutf-8p
+gC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\Controllers\ContactController.csutf-8q
+hC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\Controllers\ProducttController.csutf-8o
+fC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\Controllers\ValuesController.csutf-8Z
+QC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\Program.csutf-8Z
+QC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\Startup.csutf-8[
+PC:\Users\onurs\AppData\Local\Temp\.NETCoreApp,Version=v2.2.AssemblyAttributes.csutf-8°
+ïC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\obj\Debug\netcoreapp2.2\Melidya.MicroservicesProductt.Api.RazorAssemblyInfo.csutf-8ú
+êC:\Users\onurs\source\repos\Melidya2\Melidya.Microservices.Product.Api\obj\Debug\netcoreapp2.2\Melidya.MicroservicesProductt.Api.AssemblyInfo.csutf-8

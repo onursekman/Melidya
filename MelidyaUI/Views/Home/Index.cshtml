@@ -1,0 +1,89 @@
+﻿@using MelidyaUI.Models
+@model HomeModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <section class="home-slider owl-carousel img" style="background-image: url(images/156789201286148109.jpg); ">
+        @foreach (var item in Model.ProductModel.Take(4))
+        {
+
+            <div class="slider-item">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+                        <div class="col-md-6 col-sm-12 ftco-animate">
+                            <span class="subheading">Melidya Çikolata</span>
+                            <h1 class="mb-4">@item.Product_Name</h1>
+
+                        </div>
+                        <div class="col-md-6 ftco-animate">
+                            <p><a href="/Product/ProductDetail/@item.ID"><img src="@item.Image" class="img-fluid" alt=""></a> </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </section>
+
+<section class="ftco-intro">
+    <div class="container-wrap">
+        <div class="wrap d-md-flex">
+            <div class="info">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="icon"><span class="icon-phone"></span></div>
+                        <div class="text">
+                            <h3>0212 437 2441</h3>
+                            <p>Melidya Çikolata</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="icon"><span class="icon-my_location"></span></div>
+                        <div class="text">
+                            <h3>M.CENTER ST. C BLK.194 BAYRAMPAŞA</h3>
+                            <p>KOCATEPE MAH.G.İSKELESİ CAD.İSTANBUL/TÜRKİYE</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="icon"><span class="icon-clock-o"></span></div>
+                        <div class="text">
+                            <h3>Pazartesi-Cumartesi Günleri Açık</h3>
+                            <p>08:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social d-md-flex pl-md-5 p-4 align-items-center">
+                <ul class="social-icon">
+                    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.instagram.com/melidyacikolata"><span class="icon-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-about d-md-flex">
+    <div class="one-half img" style="background-image: url(images/about.jpg);"></div>
+    <div class="one-half ftco-animate">
+        <div class="heading-section ftco-animate ">
+            <h2 class="mb-4"> <span class="flaticon-chef">Melidya</span> Çikolata</h2>
+        </div>
+        <div>
+            <p>
+                
+                Çocukluktan yetişkinliğe, hatta yaşlılığa kadar çikolata hemen hemen herkesin en sevdiği tatlılardandır.
+                Sağlığa faydalı ve lezzetli bir besin olan çikolata, zihinsel ve ruhsal açıdan modun yükselmesini sağlamaktadır. Bundan dolayı çikolata strese de iyi gelmektedir ve daha mutlu hissedilmesine yardımcı olmaktadır. Peki ya kalbiniz? Kalp işlevleri de dahil olmak üzere, beyin ve sinir sistemi fonksiyonlarını desteklemektedir.
+                Sağlığı lezzete dönüştürdük
+            </p>
+        </div>
+    </div>
+</section>

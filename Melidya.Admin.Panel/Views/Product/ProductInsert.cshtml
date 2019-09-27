@@ -1,0 +1,121 @@
+﻿@using Melidya.Admin.Panel.Models
+@model CategoryModel
+@{
+    ViewData["Title"] = "ProductInsert";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<form asp-controller="Product" asp-action="ProductInsert" method="post" enctype="multipart/form-data">
+    <div id="page-wrapper">
+        <div class="row">
+
+            <div class="col-md-8 col-xs-12">
+                <div class="white-box">
+
+                    <div class="form-group">
+                        <label class="col-md-12">Ürün İsmi</label>
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Ürün İsmi" class="form-control form-control-line" name="ProductName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-email" class="col-md-12">Ürün Detayı</label>
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Ürün Detayı" class="form-control form-control-line" name="ProductDetail" id="example-email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-email" class="col-md-12">Resim</label>
+                        <div class="col-md-12">
+                            <input class="form-control" type="file" name="file" accept="image/*" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-email" class="col-md-12">Kategori</label>
+                        <div class="col-md-12">
+                            @Html.DropDownListFor(model => model.CategoryID, Model.CategorySelectList, "Please Select", new { @class = "form-control form-control-line" })
+
+                        </div>
+                    </div>
+                    <button type="submit">Ekle</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="~/plugins/iCheck/icheck.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            })
+
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            })
+
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            })
+        })
+
+        $("#add-user").click(function () {
+            var Name = document.getElementById("Name").value;
+            var Surname = document.getElementById("Surname").value;
+            var Email = document.getElementById("Email").value;
+            var Password = document.getElementById("Password").value;
+            var data = {
+
+                Name: Name,
+                Surname: Surname,
+                Email: Email,
+                Password: Password,
+
+            }
+            return updatePassword(data);
+
+
+        })
+
+
+
+        function updatePassword(data) {
+            $.ajax({
+              
+                data: JSON.stringify(data),
+
+                success: function (result) {
+                    if (result.resultCode == 200) {
+                        $("#divresult").removeClass("alert-danger");
+                        $("#divresult").addClass("alert-success");
+                    }
+                    else if (result.resultCode == 500) {
+                        $("#divresult").removeClass("alert-success");
+                        $("#divresult").addClass("alert-danger");
+
+                    }
+                    else {
+                        $("#divresult").removeClass("alert-success");
+                        $("#divresult").removeClass("lblSucMessage");
+                    }
+                    $("#lblResultMessage").text(result.resultMessage);
+
+                    $("#divresult").show();
+
+                    setTimeout(function () { $("#divresult").hide('slow'); }, 3000);
+
+
+                }
+
+            })
+        }
+
+    </script>
+}

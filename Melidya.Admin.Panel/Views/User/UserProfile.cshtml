@@ -1,0 +1,138 @@
+﻿@using Melidya.Admin.Panel.Models
+@model UserModel
+@{
+    ViewData["Title"] = "UserProfile";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<div id="page-wrapper">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body card-block">
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="text-input" class=" form-control-label"  >İsim</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="hidden" name="ID" value="@Model.ID" id="ID" />
+                        <input type="text" name="Name" value="@Model.Name" id="Name" class="form-control required" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="Surname" class=" form-control-label">Soyisim</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="text" name="Surname" value="@Model.Surname" id="Surname" class="form-control required" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="email-input" class=" form-control-label">Email</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="email" name="Email" value="@Model.Email" id="Email" class="form-control required" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="password-input" class=" form-control-label">Password</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <input type="password" name="Password" value="@Model.Password" id="Password" class="form-control required" />
+                       
+                    </div>
+                    <div class='alert alert-dismissible' id="divresult" style="display:none">
+                        <span class="label" border="1px" id="lblResultMessage" style="color:white"></span>
+                    </div>
+                </div>
+                    <div class='alert alert-dismissible' id="divresult" style="display:none">
+                        <span class="label" id="lblResultMessage" style="color:white"></span>
+                    </div>
+                <div class="card-footer">
+                    <button type="submit" id="update-User" click="#update-User" class="btn btn-primary">Ekle</button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/plugins/iCheck/icheck.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            })
+
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            })
+
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            })
+        })
+
+        $("#update-User").click(function () {
+           
+            var Name = document.getElementById("Name").value;
+            var Surname = document.getElementById("Surname").value;
+            var Email = document.getElementById("Email").value;
+            var Password = document.getElementById("Password").value;
+            var data = {
+                ID: $("#ID").val(),
+                Name: Name,
+                Surname: Surname,
+                Email: Email,
+                Password: Password,
+
+            }
+            return updateUser(data);
+
+
+        })
+
+
+
+        function updateUser(data) {
+            $.ajax({
+                url: "/Admin/User/UpdateUser",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data:JSON.stringify(data),
+
+                success: function (result) {
+                    if (result.resultCode == 200) {
+                        $("#divresult").removeClass("alert-danger");
+                        $("#divresult").addClass("alert-success");
+                    }
+                    else if (result.resultCode == 500) {
+                        $("#divresult").removeClass("alert-success");
+                        $("#divresult").addClass("alert-danger");
+
+                    }
+                    else {
+                        $("#divresult").removeClass("alert-success");
+                        $("#divresult").removeClass("lblSucMessage");
+                    }
+                    $("#lblResultMessage").text(result.resultMessage);
+
+                    $("#divresult").show();
+
+                    setTimeout(function () { $("#divresult").hide('slow'); }, 3000);
+
+
+                }
+
+            })
+        }
+
+
+    </script>
+}

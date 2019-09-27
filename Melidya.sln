@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Melidya.MicroservicesUser.Api", "Melidya.Microservices.User.Api\Melidya.MicroservicesUser.Api.csproj", "{7CCC3FC3-A64C-4D2A-BBDD-3BA80FE1B060}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Melidya.MicroservicesProductt.Api", "Melidya.Microservices.Product.Api\Melidya.MicroservicesProductt.Api.csproj", "{C01700FE-7C28-4262-958D-54CA7925C81A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MelidyaEntity", "MelidyaEntity\MelidyaEntity.csproj", "{BBC54AC1-62D0-4637-A639-A43B545544B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Melidya.Admin.Panel", "Melidya.Admin.Panel\Melidya.Admin.Panel.csproj", "{5BB875E7-79DE-4714-A514-F538FAB93491}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MelidyaUI", "MelidyaUI\MelidyaUI.csproj", "{199E68D3-1080-4AD1-A09B-9BD420A40C69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CCC3FC3-A64C-4D2A-BBDD-3BA80FE1B060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCC3FC3-A64C-4D2A-BBDD-3BA80FE1B060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCC3FC3-A64C-4D2A-BBDD-3BA80FE1B060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCC3FC3-A64C-4D2A-BBDD-3BA80FE1B060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C01700FE-7C28-4262-958D-54CA7925C81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C01700FE-7C28-4262-958D-54CA7925C81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C01700FE-7C28-4262-958D-54CA7925C81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C01700FE-7C28-4262-958D-54CA7925C81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC54AC1-62D0-4637-A639-A43B545544B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC54AC1-62D0-4637-A639-A43B545544B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC54AC1-62D0-4637-A639-A43B545544B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC54AC1-62D0-4637-A639-A43B545544B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB875E7-79DE-4714-A514-F538FAB93491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB875E7-79DE-4714-A514-F538FAB93491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB875E7-79DE-4714-A514-F538FAB93491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB875E7-79DE-4714-A514-F538FAB93491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199E68D3-1080-4AD1-A09B-9BD420A40C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199E68D3-1080-4AD1-A09B-9BD420A40C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199E68D3-1080-4AD1-A09B-9BD420A40C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199E68D3-1080-4AD1-A09B-9BD420A40C69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC47C37B-053A-4D74-AF14-5F5E10A94B45}
+	EndGlobalSection
+EndGlobal

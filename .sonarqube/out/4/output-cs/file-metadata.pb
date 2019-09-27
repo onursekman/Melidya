@@ -1,0 +1,10 @@
+~
+sC:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.csutf-8€
+uC:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.csutf-8€
+uC:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.csutf-8‘
+…C:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.csutf-8‚
+wC:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.csutf-8•
+‰C:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.csutf-8€
+uC:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.csutf-8~
+sC:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.csutf-8Š
+C:\Users\onurs\source\repos\Melidya2\Melidya.Admin.Panel\obj\Debug\netcoreapp2.2\Melidya.Admin.Panel.RazorTargetAssemblyInfo.csutf-8

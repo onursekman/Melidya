@@ -1,0 +1,78 @@
+﻿@using MelidyaUI.Models
+@model MessageModell
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+
+<section class="ftco-section contact-section">
+    <div class="container mt-5">
+        <div class="row block-9">
+
+            <div class="col-md-1"></div>
+            <div class="col-md-6 ftco-animate">
+                <form action="/Contact/Index" method="post" class="contact-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="İsim" id="FirstName" name="FirstName">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Soyisim" id="LastName" name="LastName">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email" id="Email"name="Email">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Telefon Numarası" id="PhoneNumber" name="PhoneNumber">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Mesaj Başlığı" id="MessageTitle" name="MessageTitle">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="MessageDetail" cols="30" rows="7" class="form-control" placeholder="Message" id="MessageDetail" ></textarea>
+                    </div>
+                    @if (ViewBag.Message == null)
+                    {
+
+
+
+                    }
+                    else if (ViewBag.Message==200)
+                    {
+                        <div class="form-group">
+                            <span class="label" border="1px" id="lblResultMessage" style="background-color:green">Messaj Gönderimi Başarılı</span>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="form-group">
+                            <span class="label" border="1px" id="lblResultMessage" style="background-color:red">Messaj Gönderilemedi HATA!!</span>
+                        </div>
+                    }
+                    <div class="form-group">
+                        <input type="submit" value="Mesaj Gönder" class="btn btn-primary py-3 px-5" id="add-messages" click="#add-messages">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="map"></div>
+
